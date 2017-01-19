@@ -1,0 +1,11 @@
+{
+  "name": "newman-wrapper",
+  "version": "1.0.2",
+  "description": "A wrapper to inject config values postman environment variables",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anjola Awofisoye <anjola.awofisoye@gmail.com>",
+  "license": "ISC"
+}
