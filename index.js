@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 
-if(process.argv[3] ="clientsecret"){
+
 var fileName = process.argv[2]
 var file = require(fileName);
 ReplaceKey(file, process.argv[3], process.argv[4]);
@@ -9,7 +9,7 @@ ReplaceKey(file, process.argv[3], process.argv[4]);
 fs.writeFile(fileName, JSON.stringify(file), function (err) {
   if (err) return console.log(err);
 });
-}
+
 
 function ReplaceKey(object, keytoassign, valuetoassign) {
   for (var x in object) {
