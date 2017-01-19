@@ -2,7 +2,7 @@ var chai = require('chai');
 var expect = chai.expect;
 
 // `describe` makes a "suite" of tests; think of them as a group.
-describe('fake suite of tests', function() {
+describe('A suite of tests', function() {
 
   // The tests have an English description...
   it('has 2 equal to be greater than 0', function() {

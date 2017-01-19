@@ -1,8 +1,8 @@
 var fs = require('fs');
+const path = require('path');
 
-
-
-var fileName = process.argv[2]
+var semipath = path.join(__dirname, '..','..')+ process.argv[2];
+var fileName = path.normalize(semipath, process.argv[2]);
 var file = require(fileName);
 ReplaceKey(file, process.argv[3], process.argv[4]);
 
