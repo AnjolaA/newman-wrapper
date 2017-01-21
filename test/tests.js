@@ -1,4 +1,5 @@
 var chai = require('chai');
+var packaged = require('../index.js');
 var expect = chai.expect;
 
 // `describe` makes a "suite" of tests; think of them as a group.
