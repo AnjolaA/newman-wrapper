@@ -1,12 +1,13 @@
 var fs = require('fs');
 const path = require('path');
+var addon =  process.argv[2];
+var prepath = path.join(__dirname, '..','..');
+var filepath = path.join(prepath, addon);
 
-var semipath = path.join(__dirname, '..','..')+ process.argv[2];
-var fileName = path.normalize(semipath, process.argv[2]);
-var file = require(fileName);
+var file = require(filepath);
 ReplaceKey(file, process.argv[3], process.argv[4]);
 
-fs.writeFile(fileName, JSON.stringify(file), function (err) {
+fs.writeFile(filepath, JSON.stringify(file), function (err) {
   if (err) return console.log(err);
 });
 
