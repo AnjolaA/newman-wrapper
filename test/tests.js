@@ -1,21 +1,32 @@
+var replacer = require(__dirname + '/../function.js');
 var chai = require('chai');
-var packaged = require('../index.js');
 var expect = chai.expect;
+var fs = require('fs');
+const path = require('path');
+var filepath = path.resolve("test\\env.json");
+var file = require(filepath);
 
-// `describe` makes a "suite" of tests; think of them as a group.
 describe('A suite of tests', function() {
 
-  // The tests have an English description...
-  it('has 2 equal to be greater than 0', function() {
+  before(function() {
+    // runs before all tests in this block
+  });
 
-    // ...and a code assertion.
-    expect(2).to.be.above(0);
+  it('Success message when complete', function() {
+    let result = replacer.replacevalue(file, 'clientsecret', 'money');
+    expect(replacer.replacevalue(file, 'clientsecret', 'money')).to.be.equal("complete");
+
+  });
+    it('Key and Value cannot be null with incomplete request', function() {   
+    let result = replacer.replacevalue(file);
+    expect(result).to.be.equal("Key and Value cannot be null");
 
   });
 
-  // You can have multiple tests in a suite.
-  it('has 1 equal to 1', function() {
-    expect(1).to.equal(1);
+    it('File/Object cannot be null with incomplete request', function() {
+    let result = replacer.replacevalue();
+    expect(result).to.be.equal("Key and Value cannot be null");
+
   });
 
 });
