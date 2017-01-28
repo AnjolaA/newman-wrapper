@@ -14,7 +14,12 @@ describe('A suite of tests', function() {
 
   it('Success message when complete', function() {
     let result = replacer.replacevalue(file, 'clientsecret', 'money');
-    expect(replacer.replacevalue(file, 'clientsecret', 'money')).to.be.equal("complete");
+    expect(replacer.replacevalue(file, 'clientsecret', 'money')).to.be.equal("Found and updated: clientsecret");
+
+  });
+
+    it('Not found message when not found', function() {
+    expect(replacer.replacevalue(file, 'myclientsecret', 'money')).to.be.equal("Could not find: myclientsecret");
 
   });
     it('Key and Value cannot be null with incomplete request', function() {   
