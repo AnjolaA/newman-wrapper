@@ -22,6 +22,7 @@ replacevalue: function (object, keytoassign, valuetoassign) {
       }
     }
   }
+  console.log(status);
   return status;
 }
 }

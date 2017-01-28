@@ -9,7 +9,6 @@ var file = require(filepath);
 replacer.replacevalue(file, process.argv[3], process.argv[4]);
 
 fs.writeFile(filepath, JSON.stringify(file), function (err) {
-  console.log("Update complete");
   if (err) return console.log(err);
 });
 
