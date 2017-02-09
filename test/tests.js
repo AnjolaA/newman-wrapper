@@ -3,7 +3,7 @@ var chai = require('chai');
 var expect = chai.expect;
 var fs = require('fs');
 const path = require('path');
-var filepath = path.resolve("test\\env.json");
+var filepath = path.resolve("test/env.json");
 var file = require(filepath);
 
 describe('A suite of tests', function() {
